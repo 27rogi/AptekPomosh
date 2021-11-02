@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Commissioner:wght@400;600;700;800&display=swap');
+@import "../node_modules/vue-good-table/src/styles/style.scss";
+
+* {
+  @apply transition-colors duration-100 ease-out;
+}
+
+::selection {
+  @apply bg-green-300 text-white;
+}
+
+.ui-button {
+  @apply gap-2 flex flex-row items-center justify-center bg-green-400 px-4 py-2 text-center rounded-xl font-semibold text-green-50;
+  &:hover {
+    @apply bg-green-300;
+  }
+}
+
+.ui-input {
+  @apply bg-green-50 p-2 rounded-xl;
+}
+
+.vgt-wrap.green {
+  @apply overflow-hidden rounded-2xl;
+  .vgt-inner-wrap {
+    @apply shadow-none;
+  }
+  .vgt-table.green {
+    @apply bg-green-100 bg-opacity-50 border-none rounded-2xl;
+    thead th {
+      background: none;
+      @apply bg-green-500 bg-opacity-70 text-green-50;
+    }
+    td {
+      @apply text-green-900 font-semibold;
+    }
+    tr:nth-of-type(odd) {
+      @apply bg-green-300 bg-opacity-20;
+    }
+    .sortable {
+      button {
+        &::after {
+          border-bottom: 5px solid #fff;
+        }
+        &::before {
+          border-top: 5px solid #fff;
+        }
+      }
+    }
+  }
+}
